@@ -4,19 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday, Shifa</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230C0A08'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='58' font-style='italic' fill='%23E3C15E' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <style>
   :root{
-    --ivory:#FBF7EE;
-    --gold:#C9A227;
-    --gold-soft:#E8D5A8;
-    --gold-deep:#9C7A1B;
-    --charcoal:#221E17;
-    --blush:#F1E4D3;
-    --white:#FFFDF9;
+    --ivory:#0C0A08;
+    --gold:#E3C15E;
+    --gold-soft:#8C7440;
+    --gold-deep:#D4AF37;
+    --charcoal:#F3ECDD;
+    --blush:#1B160F;
+    --white:#17130D;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
@@ -31,7 +32,7 @@
   @media (prefers-reduced-motion: reduce){ *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;} }
 
   .grain{
-    position:fixed; inset:0; pointer-events:none; z-index:1; opacity:0.035;
+    position:fixed; inset:0; pointer-events:none; z-index:1; opacity:0.05;
     background-image:radial-gradient(circle, var(--charcoal) 1px, transparent 1px);
     background-size:3px 3px;
   }
@@ -43,7 +44,7 @@
   .sparkle-field{ position:fixed; inset:0; pointer-events:none; z-index:2; overflow:hidden; }
   .sparkle{
     position:absolute; width:4px; height:4px; border-radius:50%;
-    background:var(--gold-soft); opacity:0;
+    background:var(--gold); opacity:0;
   }
 
   section{
@@ -73,7 +74,7 @@
     position:relative; width:220px; height:150px;
     background:linear-gradient(180deg, var(--white), var(--blush));
     border:1px solid var(--gold-soft);
-    box-shadow:0 20px 40px rgba(150,120,40,0.22);
+    box-shadow:0 20px 44px rgba(0,0,0,0.6);
     overflow:visible;
   }
   .env-flap{
@@ -99,7 +100,7 @@
     font-size:0.85rem; opacity:0; z-index:1;
   }
   .gate-text{ margin-top:30px; font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.15rem; color:var(--gold-deep); }
-  .gate-sub{ margin-top:6px; font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; color:#8a7f6b; }
+  .gate-sub{ margin-top:6px; font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; color:#A79C84; }
 
   /* ---------- HERO ---------- */
   .hero{ background:radial-gradient(ellipse at top, var(--blush) 0%, transparent 55%), var(--ivory); perspective:800px; }
@@ -108,7 +109,7 @@
   .hero h1 .letter{ display:inline-block; }
   .hero h1 .sub-line{ display:block; font-style:italic; font-weight:600; color:var(--gold); font-size:0.5em; margin-top:14px; }
   .hero-line{ width:0; height:1px; background:var(--gold); margin:26px auto; }
-  .hero-sub{ max-width:340px; font-size:1rem; line-height:1.7; color:#5c5344; }
+  .hero-sub{ max-width:340px; font-size:1rem; line-height:1.7; color:#CBC0A6; }
   .scroll-cue{ position:absolute; bottom:34px; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-deep); }
   .scroll-cue .line{ display:block; width:1px; height:26px; background:var(--gold); margin:8px auto 0; }
 
@@ -131,7 +132,7 @@
     width:100%; height:100%; border-radius:8px;
     background:linear-gradient(160deg, var(--gold-soft), var(--gold));
     display:flex; align-items:center; justify-content:center;
-    box-shadow:0 10px 24px rgba(150,120,40,0.28);
+    box-shadow:0 10px 26px rgba(0,0,0,0.5);
     position:relative; transform-style:preserve-3d;
   }
   .gift-box::before{ content:''; position:absolute; left:47%; top:0; width:6%; height:100%; background:var(--white); opacity:0.85; }
@@ -142,20 +143,28 @@
     font-family:'Cormorant Garamond', serif; font-style:italic; font-size:0.92rem; color:var(--gold-deep);
     opacity:0; padding:6px; text-align:center;
   }
-  .gifts-hint{ margin-top:30px; font-size:0.85rem; color:#8a7f6b; max-width:300px; line-height:1.6; }
+  .gifts-hint{ margin-top:30px; font-size:0.85rem; color:#A79C84; max-width:300px; line-height:1.6; }
 
   /* ---------- COLLAGE ---------- */
   .collage-section{ background:var(--white); overflow:hidden; }
-  .collage{ display:flex; flex-wrap:wrap; gap:24px; justify-content:center; max-width:420px; }
+  .collage{ display:flex; flex-wrap:wrap; gap:26px; justify-content:center; max-width:460px; }
   .frame{
-    width:130px; height:150px; background:var(--ivory); border:6px solid var(--white);
-    box-shadow:0 10px 26px rgba(150,120,40,0.22), 0 0 0 1px var(--gold-soft);
-    display:flex; align-items:center; justify-content:center;
+    width:140px; height:172px; background:var(--ivory); border:7px solid var(--white);
+    box-shadow:0 14px 30px rgba(0,0,0,0.55), 0 0 0 1px var(--gold-soft);
+    display:flex; align-items:center; justify-content:center; overflow:hidden;
     font-family:'Cormorant Garamond', serif; font-style:italic; color:var(--gold-deep);
-    font-size:0.8rem; text-align:center; padding:8px;
+    font-size:0.8rem; text-align:center; padding:0;
+    transition:transform 0.5s cubic-bezier(.2,.8,.2,1), box-shadow 0.5s cubic-bezier(.2,.8,.2,1);
+    will-change:transform;
   }
-  .frame img{ width:100%; height:100%; object-fit:cover; }
-  .collage-hint{ margin-top:28px; font-size:0.85rem; color:#8a7f6b; max-width:320px; line-height:1.6; }
+  .frame img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.6s ease; }
+  .frame:hover, .frame:focus-within{
+    transform:translateY(-10px) scale(1.05) rotate(0deg) !important;
+    box-shadow:0 24px 44px rgba(0,0,0,0.7), 0 0 0 1px var(--gold), 0 0 26px rgba(227,193,94,0.22);
+    z-index:5;
+  }
+  .frame:hover img{ transform:scale(1.08); }
+  .collage-hint{ margin-top:28px; font-size:0.85rem; color:#A79C84; max-width:320px; line-height:1.6; }
   .collage-hint code{ background:var(--blush); padding:1px 6px; border-radius:4px; font-size:0.8rem; }
 
   /* ---------- FINALE ---------- */
@@ -163,21 +172,81 @@
   .celebrate-wrap{ display:inline-block; }
   .celebrate-btn{
     font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.2rem;
-    background:var(--charcoal); color:var(--gold-soft); border:1px solid var(--gold);
+    background:linear-gradient(135deg, var(--gold), var(--gold-deep)); color:#17130D; border:1px solid var(--gold);
     padding:17px 46px; border-radius:2px; cursor:pointer; letter-spacing:0.05em;
-    position:relative; overflow:hidden;
+    position:relative; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.5);
   }
   .finale-msg{ margin-top:32px; font-family:'Playfair Display', serif; font-style:italic; font-size:1.4rem; color:var(--gold-deep); opacity:0; max-width:340px; }
   .confetti-piece{ position:fixed; top:-10px; width:8px; height:14px; z-index:50; pointer-events:none; }
 
   footer{ text-align:center; padding:32px; font-family:'Cormorant Garamond', serif; font-style:italic; color:var(--gold-deep); font-size:0.95rem; background:var(--ivory); }
+
+  /* ---------- FLOATING CONTROLS ---------- */
+  .floating-controls{
+    position:fixed; bottom:22px; right:18px; z-index:60;
+    display:flex; flex-direction:column; gap:12px;
+  }
+  .fab{
+    width:46px; height:46px; border-radius:50%;
+    background:var(--white); border:1px solid var(--gold-soft);
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+    box-shadow:0 8px 22px rgba(0,0,0,0.55);
+    transition:transform 0.3s ease, border-color 0.3s ease;
+  }
+  .fab:hover{ transform:scale(1.08); border-color:var(--gold); }
+  .fab svg{ width:19px; height:19px; }
+  #musicIconOff{ display:none; }
+  .fab.muted #musicIconOn{ display:none; }
+  .fab.muted #musicIconOff{ display:block; }
+
+  /* ---------- PRELOADER ---------- */
+  #preloader{
+    position:fixed; inset:0; z-index:200;
+    background:var(--ivory);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+  }
+  .preload-mono{
+    font-family:'Playfair Display', serif; font-style:italic; font-weight:600;
+    font-size:3.2rem; color:var(--gold);
+    opacity:0; transform:scale(0.8);
+  }
+  .preload-bar{ width:120px; height:1px; background:rgba(227,193,94,0.2); margin-top:22px; overflow:hidden; }
+  .preload-fill{ width:0%; height:100%; background:var(--gold); }
+
+  /* ---------- FALLING PARTICLES ---------- */
+  .falling-particles{ position:fixed; inset:0; pointer-events:none; z-index:3; overflow:hidden; }
+  .fall-particle{
+    position:absolute; top:-20px; border-radius:50%;
+    background:radial-gradient(circle, var(--gold) 0%, transparent 70%);
+    opacity:0;
+  }
 </style>
 </head>
 <body>
 
+<div id="preloader">
+  <div class="preload-mono">S</div>
+  <div class="preload-bar"><div class="preload-fill" id="preloadFill"></div></div>
+</div>
+
 <div class="progress-bar" id="progressBar"></div>
 <div class="grain"></div>
 <div class="sparkle-field" id="sparkleField"></div>
+<div class="falling-particles" id="fallingParticles"></div>
+
+<div class="floating-controls">
+  <button class="fab muted" id="musicToggle" aria-label="Toggle background music">
+    <svg id="musicIconOn" viewBox="0 0 24 24" fill="none" stroke="#E3C15E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+    <svg id="musicIconOff" viewBox="0 0 24 24" fill="none" stroke="#E3C15E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle><line x1="3" y1="3" x2="21" y2="21"></line></svg>
+  </button>
+  <button class="fab" id="shareBtn" aria-label="Share on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#E3C15E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+  </button>
+</div>
+
+<audio id="bgMusic" loop preload="none">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
 
 <div id="gate">
   <div class="envelope">
@@ -225,187 +294,4 @@
   <div class="section-label">memories</div>
   <div class="section-title">Our favourite moments</div>
   <div class="collage" id="collage">
-    <div class="frame">add a photo here</div>
-    <div class="frame">add a photo here</div>
-    <div class="frame">add a photo here</div>
-  </div>
-  <p class="collage-hint">Replace each <code>&lt;div class="frame"&gt;</code> with an <code>&lt;img src="..."&gt;</code> of your favourite pictures with Shifa.</p>
-</section>
-
-<section class="finale-section">
-  <div class="section-label">one last thing</div>
-  <div class="section-title">For the birthday girl</div>
-  <div class="celebrate-wrap" id="celebrateWrap">
-    <button class="celebrate-btn" id="celebrateBtn">Celebrate Shifa ✦</button>
-  </div>
-  <p class="finale-msg" id="finaleMsg">Happy Birthday, Shifa — here's to you, today and always.</p>
-</section>
-
-<footer>Made with love, for the most special sister ✿</footer>
-
-<script>
-gsap.registerPlugin(ScrollTrigger);
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const isTouch = window.matchMedia('(pointer: coarse)').matches;
-
-/* Ambient sparkles */
-const field = document.getElementById('sparkleField');
-for(let i=0;i<26;i++){
-  const s = document.createElement('div');
-  s.className = 'sparkle';
-  s.style.left = Math.random()*100+'%';
-  s.style.top = Math.random()*100+'%';
-  field.appendChild(s);
-  gsap.to(s, { opacity: 0.8, scale: 1.3, duration: 1.6 + Math.random()*1.5,
-    repeat:-1, yoyo:true, delay: Math.random()*4, ease:'sine.inOut' });
-}
-
-/* Scroll progress bar */
-gsap.to('#progressBar', { scaleX: 1, ease:'none',
-  scrollTrigger:{ trigger: document.body, start:'top top', end:'bottom bottom', scrub:0.3 } });
-
-/* Build hero letters */
-function buildLetters(text){
-  return text.split('').map(ch => `<span class="letter">${ch === ' ' ? '&nbsp;' : ch}</span>`).join('');
-}
-document.getElementById('heroTitle').innerHTML =
-  buildLetters('Shifa') + '<span class="sub-line">' + buildLetters('Happy Birthday to you') + '</span>';
-
-/* Build message word spans */
-const msgEl = document.getElementById('messageText');
-msgEl.innerHTML = msgEl.textContent.split(' ').map(w => `<span class="word">${w}</span>`).join(' ');
-
-/* GATE open sequence */
-function openGate(){
-  const tl = gsap.timeline();
-  tl.to('.env-letter', { opacity:1, y:-30, duration:0.6, ease:'power2.out' })
-    .to('#envFlap', { rotateX:180, duration:0.5, ease:'power2.inOut' }, '-=0.2')
-    .to('.envelope', { scale:1.15, opacity:0, duration:0.6, ease:'power3.in' })
-    .to('#gate', { autoAlpha:0, duration:0.5 }, '-=0.3')
-    .call(runHeroIntro);
-}
-document.getElementById('envelope').addEventListener('click', openGate);
-
-function runHeroIntro(){
-  const tl = gsap.timeline();
-  tl.from('#eyebrow', { opacity:0, y:16, duration:0.7, ease:'power2.out' })
-    .from('.hero h1 .letter', { opacity:0, y:40, rotateX:-60, stagger:0.04, duration:0.8, ease:'back.out(1.7)' }, '-=0.3')
-    .from('.hero h1 .sub-line .letter', { opacity:0, y:14, stagger:0.015, duration:0.5, ease:'power2.out' }, '-=0.4')
-    .to('#heroLine', { width:70, duration:0.8, ease:'power3.out' }, '-=0.2')
-    .from('#heroSub', { opacity:0, y:14, duration:0.8, ease:'power2.out' }, '-=0.5')
-    .from('.scroll-cue', { opacity:0, duration:0.6 }, '-=0.3');
-}
-
-/* Message reveal on scroll */
-gsap.timeline({ scrollTrigger:{ trigger:'.message-section', start:'top 65%' } })
-  .from('.message-mark', { opacity:0, y:-10, duration:0.5 })
-  .to('.message-text .word', { opacity:1, stagger:0.025, duration:0.4, ease:'power1.out' }, '-=0.2')
-  .from('.message-sign', { opacity:0, y:8, duration:0.5 }, '-=0.1');
-
-/* Gifts drop-in */
-gsap.from('.gift', {
-  scrollTrigger:{ trigger:'.gifts-section', start:'top 60%' },
-  y:-50, opacity:0, rotate:-8, stagger:0.15, duration:0.9, ease:'bounce.out'
-});
-
-/* Collage parallax + reveal */
-document.querySelectorAll('#collage .frame').forEach((f, i)=>{
-  const rot = i===0 ? -5 : i===1 ? 4 : -2;
-  gsap.set(f, { rotate: rot });
-  gsap.from(f, {
-    scrollTrigger:{ trigger:'.collage-section', start:'top 60%' },
-    y: 60, opacity:0, duration:0.8, delay:i*0.12, ease:'power3.out'
-  });
-  if(!reduceMotion){
-    gsap.to(f, {
-      y: (i%2===0 ? -18 : -10),
-      ease:'none',
-      scrollTrigger:{ trigger:'.collage-section', start:'top bottom', end:'bottom top', scrub:0.6 }
-    });
-  }
-});
-
-/* Section labels/titles fade-in generic */
-document.querySelectorAll('.gifts-section .section-label, .gifts-section .section-title, .collage-section .section-label, .collage-section .section-title, .finale-section .section-label, .finale-section .section-title').forEach(el=>{
-  gsap.from(el, {
-    scrollTrigger:{ trigger:el, start:'top 80%' },
-    opacity:0, y:16, duration:0.6, ease:'power2.out'
-  });
-});
-
-/* Gift box open interaction */
-const colors = ['#C9A227','#E8D5A8','#F1E4D3','#9C7A1B','#FBF7EE'];
-function burstConfetti(x, y, count){
-  for(let i=0;i<count;i++){
-    const p = document.createElement('div');
-    p.className = 'confetti-piece';
-    p.style.left = x + 'px';
-    p.style.top = y + 'px';
-    p.style.background = colors[Math.floor(Math.random()*colors.length)];
-    document.body.appendChild(p);
-    gsap.to(p, {
-      x: (Math.random()*160-80),
-      y: window.innerHeight - y + 80,
-      rotate: Math.random()*540,
-      opacity:0.9,
-      duration: 1.6 + Math.random()*1.2,
-      ease:'power1.in',
-      onComplete: () => p.remove()
-    });
-  }
-}
-document.querySelectorAll('.gift').forEach(gift=>{
-  gift.addEventListener('click', ()=>{
-    if(gift.dataset.open) return;
-    gift.dataset.open = '1';
-    const box = gift.querySelector('.gift-box');
-    const label = gift.querySelector('.gift-label');
-    gsap.to(box, { scale:0.3, rotate:20, opacity:0, duration:0.5, ease:'power3.in' });
-    gsap.to(label, { opacity:1, duration:0.5, delay:0.15 });
-    const rect = gift.getBoundingClientRect();
-    burstConfetti(rect.left + rect.width/2, rect.top + window.scrollY, 12);
-  });
-  if(!isTouch){
-    gift.addEventListener('mousemove', (e)=>{
-      const r = gift.getBoundingClientRect();
-      const x = (e.clientX - r.left - r.width/2) / r.width;
-      const y = (e.clientY - r.top - r.height/2) / r.height;
-      gsap.to(gift.querySelector('.gift-box'), { rotateY: x*20, rotateX: -y*20, duration:0.3, ease:'power2.out' });
-    });
-    gift.addEventListener('mouseleave', ()=>{
-      gsap.to(gift.querySelector('.gift-box'), { rotateY:0, rotateX:0, duration:0.4 });
-    });
-  }
-});
-
-/* Magnetic celebrate button */
-const celebrateWrap = document.getElementById('celebrateWrap');
-const celebrateBtn = document.getElementById('celebrateBtn');
-if(!isTouch){
-  celebrateWrap.addEventListener('mousemove', (e)=>{
-    const r = celebrateBtn.getBoundingClientRect();
-    const x = (e.clientX - r.left - r.width/2) * 0.3;
-    const y = (e.clientY - r.top - r.height/2) * 0.3;
-    gsap.to(celebrateBtn, { x, y, duration:0.3, ease:'power2.out' });
-  });
-  celebrateWrap.addEventListener('mouseleave', ()=>{
-    gsap.to(celebrateBtn, { x:0, y:0, duration:0.5, ease:'elastic.out(1,0.4)' });
-  });
-}
-celebrateBtn.addEventListener('click', (e)=>{
-  const rect = celebrateBtn.getBoundingClientRect();
-  burstConfetti(rect.left + rect.width/2, rect.top + window.scrollY, 50);
-  gsap.to('#finaleMsg', { opacity:1, y:0, duration:0.8, ease:'power2.out' });
-  gsap.fromTo(celebrateBtn, { scale:1 }, { scale:1.08, duration:0.2, yoyo:true, repeat:1 });
-});
-
-/* Reduced motion: skip elaborate stuff, just reveal everything */
-if(reduceMotion){
-  document.getElementById('gate').style.display = 'none';
-  gsap.set('.hero h1 .letter, #eyebrow, #heroSub, .message-text .word, .gift, .frame', { opacity:1, y:0, x:0, rotate:0 });
-  document.getElementById('heroLine').style.width = '70px';
-}
-</script>
-
-</body>
-</html>
+    <div class="frame"><img src="data:image/jpeg;base64,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
